@@ -31,6 +31,7 @@ export default defineConfig({
 		},
 	},
 	server: {
+		allowedHosts: process.env.GITPOD_WORKSPACE_URL ? true : [],
 		host: process.env.VITE_LISTEN_ALL_ADDRESSES === "true",
 	},
 });
